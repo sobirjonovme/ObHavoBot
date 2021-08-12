@@ -266,7 +266,7 @@ def main() -> None:
     updater.start_webhook(listen="0.0.0.0",
                       port=PORT,
                       url_path=BOT_TOKEN,
-                      webhook_url="https://iobhavo-bot.herokuapp.com/" + TOKEN)
+                      webhook_url="https://iobhavo-bot.herokuapp.com/" + BOT_TOKEN)
 
 
     # Run the bot until you press Ctrl-C or the process receives SIGINT,
