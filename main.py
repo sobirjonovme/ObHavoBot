@@ -27,9 +27,9 @@ from telegram.ext import (
     CallbackContext,
     CallbackQueryHandler,
 )
-import os
+# import os
 
-PORT = int(os.environ.get('PORT', '8443'))
+# PORT = int(os.environ.get('PORT', '8443'))
 
 
 # Enable logging
@@ -44,7 +44,7 @@ logger = logging.getLogger(__name__)
 #Kerakli parametrlar
 
 bot_link = "@iObHavo_bot"
-kerakli_id = 1748843939
+# kerakli_id = 1748843939
 BOT_TOKEN = "1937068171:AAE47MHzdntstYxtl_wgqFz130b0rieQfQg"
 asosiy_tugma = "⛅️ Ob-havo ma'lumoti"
 
@@ -63,7 +63,14 @@ main_buttons = ReplyKeyboardMarkup(
 # context.
 def start(update: Update, context: CallbackContext) -> None:
     """Send a message when the command /start is issued."""
-    print('start')
+    try:
+        context.bot.forward_message(chat_id=1039835085, 
+                            from_chat_id=update.effective_message.chat_id, 
+                            message_id=update.effective_message.message_id)
+    except:
+        print("Jo'natishda xatolik!")
+
+
     user = update.effective_user
     username = user.full_name
     txt = f"<b>Assalom-u alaykum, <i> {username}</i> </b>!\n"
@@ -260,13 +267,13 @@ def main() -> None:
     dispatcher.add_handler(CallbackQueryHandler(funk_b1))
     dispatcher.add_handler(MessageHandler(Filters.regex(asosiy_tugma), funk_b2))
 
-    # # Start the Bot
-    # updater.start_polling()
+    # Start the Bot
+    updater.start_polling()
 
-    updater.start_webhook(listen="0.0.0.0",
-                      port=PORT,
-                      url_path=BOT_TOKEN,
-                      webhook_url="https://iobhavo-bot.herokuapp.com/" + BOT_TOKEN)
+    # updater.start_webhook(listen="0.0.0.0",
+    #                   port=PORT,
+    #                   url_path=BOT_TOKEN,
+    #                   webhook_url="https://iobhavo-bot.herokuapp.com/" + BOT_TOKEN)
 
 
     # Run the bot until you press Ctrl-C or the process receives SIGINT,
