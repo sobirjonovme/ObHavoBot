@@ -130,7 +130,7 @@ def funk_hafta(latitude, longitude):
     shahar = data[0]
     hafta_kunlari = data[1]
 
-    matn = f"<b>Haftalik ob-havo \n{shahar}</b> <i>hududi</i>\n\n"
+    matn = f"<b>🗓 Haftalik ob-havo \n{shahar}</b> <i>hududi</i>\n\n"
     keyboard = [[]]
 
     for a in range(7):
@@ -139,8 +139,8 @@ def funk_hafta(latitude, longitude):
         
         malumot = kun_qisqa(latitude, longitude, hafta_kunlari[a])
         matn += f"<b>{a+1}.  <i>{malumot[1]}</i></b>\n"
-        matn += f"<b>Harorat:</b>   {malumot[2]}°C / {malumot[3]}°C\n"
-        matn += f"<b>Yog'ingarchilik ehtimoli:</b>   {malumot[5]} %\n\n"
+        matn += f"<b>🌡 Harorat:</b>   {malumot[2]}°C / {malumot[3]}°C\n"
+        matn += f"<b>🌧 Yog'ingarchilik ehtimoli:</b>   {malumot[5]} %\n\n"
     matn += f"\nDoimiy ob-havo ma'lumotlari:\n👉 {bot_link}"
     reply_keyboard = InlineKeyboardMarkup(keyboard)
     
