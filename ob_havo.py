@@ -76,10 +76,10 @@ def kun_batafsil(latitude, longitude, day):
     return shahar, malumot
 
 
-if __name__ == "__main__":
-    pass
-    # print(hafta_yasa(40.41868,71.701709))
-    # pprint(kun_batafsil(40.41868, 71.701709, "2021-08-12"))
+# if __name__ == "__main__":
+#     pass
+#     # print(hafta_yasa(40.41868,71.701709))
+#     # pprint(kun_batafsil(40.41868, 71.701709, "2021-08-12"))
     # print(pm_to_24("07:18 PM"))
     # funk1(40.41868,71.701709)
         
