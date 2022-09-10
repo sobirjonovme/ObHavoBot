@@ -55,7 +55,7 @@ logger = logging.getLogger(__name__)
 
 bot_link = "@iObHavo_bot"
 # kerakli_id = 1748843939
-BOT_TOKEN = "1937068171:AAE47MHzdntstYxtl_wgqFz130b0rieQfQg"
+BOT_TOKEN = ""
 
 # #XP bot token
 # BOT_TOKEN = "1898387737:AAEhjGQr0LhHZeM4d4u5LYLPi_mxG9aOy6E"
